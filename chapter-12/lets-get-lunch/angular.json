@@ -132,5 +132,8 @@
       }
     }
   },
-  "defaultProject": "lets-get-lunch"
+  "defaultProject": "lets-get-lunch",
+  "cli": {
+    "analytics": false
+  }
 }
