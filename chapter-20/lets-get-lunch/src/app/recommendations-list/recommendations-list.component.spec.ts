@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { of } from 'rxjs';
 
@@ -18,7 +18,7 @@ describe('RecommendationsListComponent', () => {
   let fixture: ComponentFixture<RecommendationsListComponent>;
   let recommendationsService: RecommendationsService;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [ RecommendationsListModule ]
     })

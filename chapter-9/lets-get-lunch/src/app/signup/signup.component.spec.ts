@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 import { of, throwError } from 'rxjs';
@@ -39,7 +39,7 @@ let signupPage: SignupPage;
 let authService: AuthService;
 
 describe('SignupComponent', () => {
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [ SignupModule ]
     })
@@ -52,7 +52,7 @@ describe('SignupComponent', () => {
     }).compileComponents();
   }));
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     fixture = TestBed.createComponent(SignupComponent);
     component = fixture.componentInstance;
 

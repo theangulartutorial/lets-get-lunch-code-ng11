@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { ActivatedRoute } from '@angular/router';
 import { By } from '@angular/platform-browser';
 import { of } from 'rxjs';
@@ -42,7 +42,7 @@ describe('EventViewComponent', () => {
   let fixture: ComponentFixture<EventViewComponent>;
   let eventsService: EventsService;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [ EventModule ]
     })
